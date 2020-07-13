@@ -15,11 +15,25 @@ public class PlayerMovement : MonoBehaviour
    private Vector2 playerVelocity;
     public Animator animator;
     public GameObject Hero;
+    private Direction lastDirection;
+    private Direction newDirection;
+
+    private Vector2 flipScale;
+    enum Direction
+    {
+        Left,
+        Right,
+        None
+    }
+    
    
 
     // Start is called before the first frame update
     void Start()
     {
+
+        newDirection = Direction.None;
+        lastDirection = Direction.None;
         rb2d = GetComponent<Rigidbody2D>();
         playerVelocity = Vector2.zero;
         animator.GetComponent<Animator>();
@@ -30,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        lastDirection = newDirection;
         playerVelocity = Vector2.zero;
         isWalking = false;
 
@@ -60,15 +75,18 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
+            
             animator.SetBool("iswalking", true);
             animator.SetBool("isIdle", false);
         }else if (Input.GetKey(KeyCode.D))
         {
+            newDirection = Direction.Right; 
             animator.SetBool("iswalking", true);
             animator.SetBool("isIdle", false);
         }
         else if (Input.GetKey(KeyCode.A))
         {
+            newDirection = Direction.Left;
             animator.SetBool("iswalking", true);
             animator.SetBool("isIdle", false);
         }
@@ -82,7 +100,9 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isIdle", true);
         }
 
+        
 
+        Flip(newDirection,lastDirection);
         rb2d.velocity = playerVelocity;
 
 
@@ -90,17 +110,14 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void Flip()
+    void Flip(Direction _new, Direction _last)
     {
-        Vector2 flipScale = transform.localScale;
-
-        flipScale.x *= -1;
-
-        transform.localScale = flipScale;
-
-
-
-
+        if ( _last != Direction.None && _new != _last )
+        {
+            flipScale = transform.localScale;
+            flipScale.x *= -1;
+            transform.localScale = flipScale;
+        }
     }
-        
 }
+
