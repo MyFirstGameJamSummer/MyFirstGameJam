@@ -11,6 +11,11 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Camera camera;
     private GameObject projectile_instance;
+    public GameObject MeleeAttack;
+    public GameObject MeleeAttackpoint;
+    public GameObject RangeAttackPoint;
+    public  Animator animator;
+
     
     
     // Start is called before the first frame update
@@ -27,7 +32,19 @@ public class PlayerAttack : MonoBehaviour
          
             Vector3 mousePosToWorld = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Attack(mousePosToWorld);
+            animator.SetBool("IsAttacking", true);
 
+        }else if (Input.GetMouseButtonUp(0))
+        {
+            animator.SetBool("IsAttacking", false);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("Melee");
+            MeleeAttack.SetActive(true);
+            animator.SetBool("IsAttacking", true);
+            
+            
         }
     }
 
@@ -37,8 +54,10 @@ public class PlayerAttack : MonoBehaviour
        Vector3 temp = mousePos - transform.position;
        Vector2 dir = new Vector2(temp.x, temp.y).normalized;
        
-        projectile_instance = Instantiate(projectile, transform.position, Quaternion.identity);
+        projectile_instance = Instantiate(projectile, RangeAttackPoint.transform.position, Quaternion.identity);
+
         projectile_instance.GetComponent<Rigidbody2D>().AddForce(dir * projectileForce, ForceMode2D.Impulse);
      
     }
+   
 }
