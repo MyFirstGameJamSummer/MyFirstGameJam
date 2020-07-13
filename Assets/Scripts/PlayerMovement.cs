@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalInput != 0)
         {
+            
             playerVelocity.x = horizontalInput * speed;
             isWalking = true;
         }
@@ -44,6 +45,21 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb2d.velocity = playerVelocity;
+
+
+    }
+
+
+
+    void Flip()
+    {
+        Vector2 flipScale = transform.localScale;
+
+        flipScale.x *= -1;
+
+        transform.localScale = flipScale;
+
+
 
 
     }
