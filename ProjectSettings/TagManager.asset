@@ -50,6 +50,6 @@ TagManager:
   - name: Wall
     uniqueID: 1638054851
     locked: 0
-  - name: Characters
+  - name: Sprites
     uniqueID: 1178861151
     locked: 0
