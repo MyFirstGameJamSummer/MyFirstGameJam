@@ -5,18 +5,33 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+     Animator anim;
+    [SerializeField] private float destroyDistance;
+    private Vector3 initPos;
     
-    // Start is called before the first frame update
+
     void Start()
     {
+        initPos = transform.position;
+       
         
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
-    }
+        if (Vector3.Distance(initPos, transform.position) > destroyDistance)
+        {
+            anim.SetTrigger("Destroy");
+            Destroy(gameObject, 1.5f);
 
+        }
+        
+    }
+    
+    
+    
 
 }

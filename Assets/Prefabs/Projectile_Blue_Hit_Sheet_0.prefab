@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7048187424263944750}
   - component: {fileID: -8987376800836917046}
   - component: {fileID: -1799233258359049784}
-  - component: {fileID: 803283182511646590}
+  - component: {fileID: -1891476998758077053}
   m_Layer: 0
   m_Name: Projectile_Blue_Hit_Sheet_0
   m_TagString: Untagged
@@ -151,7 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &803283182511646590
+--- !u!114 &-1891476998758077053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,9 +160,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7048187424263944751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a35f53ff1592240b74a520ff2152e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8007d70fdcb79419cba16470567b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlueProjectDestroy: {fileID: 4362649743085700971, guid: 3038fc46462d6044781a9a48b72a7347,
-    type: 3}
-  anim: {fileID: 7048187424263944750}
+  anim: {fileID: 0}
+  destroyDistance: 5
