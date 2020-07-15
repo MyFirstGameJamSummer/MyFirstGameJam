@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Camera camera;
     private GameObject projectile_instance;
-    public GameObject MeleeAttack;
+    public GameObject meleeAttack;
     public GameObject MeleeAttackpoint;
     public GameObject RangeAttackPoint;
     public  Animator animator;
@@ -40,16 +40,19 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("Melee");
-            MeleeAttack.SetActive(true);
+            
+            meleeAttack.SetActive(true);
             animator.SetBool("IsAttacking", true);
-            
-            
+           
+
+
+
         }
+
     }
 
 
-    void Attack(Vector3 mousePos)
+   public virtual void Attack(Vector3 mousePos)
     {
        Vector3 temp = mousePos - transform.position;
        Vector2 dir = new Vector2(temp.x, temp.y).normalized;

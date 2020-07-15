@@ -166,4 +166,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   animator: {fileID: 8799331755136542014}
-  Hero: {fileID: 0}
+  Hero: {fileID: 8799331755136542009}

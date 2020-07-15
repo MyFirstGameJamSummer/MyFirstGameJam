@@ -6,6 +6,7 @@ using UnityEngine;
 public class MeleeDestroy : MonoBehaviour
 {
     public Animator animator;
+    
     void Start()
     {
         
@@ -18,6 +19,7 @@ public class MeleeDestroy : MonoBehaviour
         {
             gameObject.SetActive(false);
             animator.SetBool("IsAttacking", false);
+            
         }
         
     }
