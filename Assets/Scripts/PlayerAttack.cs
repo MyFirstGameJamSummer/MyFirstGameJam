@@ -43,11 +43,11 @@ public class PlayerAttack : MonoBehaviour
                 animator.SetBool("IsAttacking", false);
             }
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
             {
                 isMeeleAttacking = true;
                 meleeAttack.SetActive(true);
-                //animator.SetBool("IsAttacking", true);
+                animator.SetBool("IsAttacking", true);
             }
         if (Input.GetMouseButtonUp(1))
         {
