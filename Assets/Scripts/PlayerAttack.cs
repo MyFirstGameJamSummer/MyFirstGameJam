@@ -15,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     public GameObject MeleeAttackpoint;
     public GameObject RangeAttackPoint;
     public  Animator animator;
+    
+
 
     
     
