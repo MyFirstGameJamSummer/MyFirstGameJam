@@ -15,12 +15,7 @@ public class MeleeDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(1))
-        {
-            gameObject.SetActive(false);
-            animator.SetBool("IsAttacking", false);
-            
-        }
+
         
     }
 }
