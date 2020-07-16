@@ -19,7 +19,7 @@ public class Projectile_destroy : MonoBehaviour
         {
             anim.SetTrigger("Destroy");
             Destroy(gameObject, 1.5f);
-
+            Debug.Log("Do something");
         }
         
     }
