@@ -16,10 +16,6 @@ public class PlayerAttack : MonoBehaviour
     public GameObject RangeAttackPoint;
     public  Animator animator;
     
-
-
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,13 +38,8 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            
             meleeAttack.SetActive(true);
             animator.SetBool("IsAttacking", true);
-           
-
-
-
         }
 
     }
