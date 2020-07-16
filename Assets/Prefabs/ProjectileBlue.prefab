@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1799233258359049784}
   - component: {fileID: -1891476998758077053}
   m_Layer: 0
-  m_Name: Projectile_Blue_Hit_Sheet_0
+  m_Name: ProjectileBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,5 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8007d70fdcb79419cba16470567b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   destroyDistance: 5
