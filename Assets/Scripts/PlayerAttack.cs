@@ -38,13 +38,8 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            
             meleeAttack.SetActive(true);
             animator.SetBool("IsAttacking", true);
-           
-
-
-
         }
 
     }
