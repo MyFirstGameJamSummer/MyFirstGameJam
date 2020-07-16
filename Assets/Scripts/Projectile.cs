@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
@@ -30,8 +31,15 @@ public class Projectile : MonoBehaviour
         }
         
     }
-    
-    
-    
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.name.Equals("Outbound"))
+        {
+            anim.SetTrigger("Destroy");
+            Destroy(gameObject, 0.5f);
+        }
+    }
 }
