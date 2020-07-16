@@ -54,15 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalInput != 0)
         {
-            
             playerVelocity.x = horizontalInput * speed;
-           
             isWalking = true;
-            
-            
-
-            
-            
         }
         
 
@@ -70,15 +63,13 @@ public class PlayerMovement : MonoBehaviour
         {
             playerVelocity.y = verticalInput * speed;
             isWalking = true;
-            
-
         }
         if (Input.GetKey(KeyCode.W))
         {
-            
             animator.SetBool("iswalking", true);
             animator.SetBool("isIdle", false);
-        }else if (Input.GetKey(KeyCode.D))
+        }
+        else if (Input.GetKey(KeyCode.D))
         {
             newDirection = Direction.Right; 
             animator.SetBool("iswalking", true);
@@ -99,9 +90,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("iswalking", false);
             animator.SetBool("isIdle", true);
         }
-
         
-
         Flip(newDirection,lastDirection);
         rb2d.velocity = playerVelocity;
 

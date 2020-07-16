@@ -66,5 +66,10 @@ public class PlayerAttack : MonoBehaviour
         projectile_instance.GetComponent<Rigidbody2D>().AddForce(dir * projectileForce, ForceMode2D.Impulse);
      
     }
-   
+
+
+   private void OnCollisionEnter2D(Collision2D other)
+   {
+       
+   }
 }
