@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
         } 
         
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && !isMeleeAttacking)
         {
             animator.SetBool("IsAttacking", false);
         }
