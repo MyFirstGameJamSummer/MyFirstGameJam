@@ -15,7 +15,8 @@ public class PlayerAttack : MonoBehaviour
     public GameObject MeleeAttackpoint;
     public GameObject RangeAttackPoint;
     public  Animator animator;
-    
+
+    private bool isMeleeAttacking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,27 +26,37 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isMeleeAttacking)
         {
          
             Vector3 mousePosToWorld = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Attack(mousePosToWorld);
             animator.SetBool("IsAttacking", true);
 
-        }else if (Input.GetMouseButtonUp(0))
+        } 
+        
+        else if (Input.GetMouseButtonUp(0))
         {
             animator.SetBool("IsAttacking", false);
         }
+        
         if (Input.GetMouseButtonDown(1))
         {
+            isMeleeAttacking = true;
             meleeAttack.SetActive(true);
             animator.SetBool("IsAttacking", true);
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            isMeleeAttacking = false;
+            meleeAttack.SetActive(false);
+            animator.SetBool("IsAttacking", false);
         }
 
     }
 
 
-   public virtual void Attack(Vector3 mousePos)
+   public void Attack(Vector3 mousePos)
     {
        Vector3 temp = mousePos - transform.position;
        Vector2 dir = new Vector2(temp.x, temp.y).normalized;

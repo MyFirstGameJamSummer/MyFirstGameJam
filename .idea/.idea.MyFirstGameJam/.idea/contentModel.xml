@@ -13,7 +13,6 @@
           <e p="PlayerAttack.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
-          <e p="Projectile_destroy.cs" t="Include" />
         </e>
         <e p="Tilemap" t="Include">
           <e p="MeleeAttack.cs" t="Include" />
