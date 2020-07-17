@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject meleeAttack;
     public GameObject MeleeAttackpoint;
     public GameObject RangeAttackPoint;
-    public  Animator animator;
+    public  Animator animator2;
 
     private bool isMeleeAttacking = false;
     // Start is called before the first frame update
@@ -31,26 +31,26 @@ public class PlayerAttack : MonoBehaviour
          
             Vector3 mousePosToWorld = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Attack(mousePosToWorld);
-            animator.SetBool("IsAttacking", true);
+            animator2.SetBool("IsAttacking", true);
 
         } 
         
         else if (Input.GetMouseButtonUp(0) && !isMeleeAttacking)
         {
-            animator.SetBool("IsAttacking", false);
+            animator2.SetBool("IsAttacking", false);
         }
         
         if (Input.GetMouseButtonDown(1))
         {
             isMeleeAttacking = true;
             meleeAttack.SetActive(true);
-            animator.SetBool("IsAttacking", true);
+            animator2.SetBool("IsAttacking", true);
         }
         else if (Input.GetMouseButtonUp(1))
         {
             isMeleeAttacking = false;
             meleeAttack.SetActive(false);
-            animator.SetBool("IsAttacking", false);
+            animator2.SetBool("IsAttacking", false);
         }
 
     }
