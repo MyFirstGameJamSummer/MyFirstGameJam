@@ -39,6 +39,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.name.Equals("Outbound"))
         {
             anim.SetTrigger("Destroy");
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Destroy(gameObject, 0.5f);
         }
     }

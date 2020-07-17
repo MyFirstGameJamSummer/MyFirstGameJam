@@ -9,13 +9,18 @@
     <e p="P:\Game Development\First Jam Summer Project\MyFirstGameJam" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="HealthBar.cs" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="PlayerAttack.cs" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="Enemy.cs" t="Include" />
+          </e>
+          <e p="HealthBar.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
           <e p="Projectile.cs" t="Include" />
         </e>
-        <e p="TakeDamage.cs" t="Include" />
         <e p="Tilemap" t="Include">
           <e p="MeleeAttack.cs" t="Include" />
         </e>
