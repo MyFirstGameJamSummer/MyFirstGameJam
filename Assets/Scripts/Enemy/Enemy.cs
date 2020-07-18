@@ -22,11 +22,12 @@ public abstract class Enemy : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            EnemyAnimatorDying();
+            Destroy(gameObject,1.55f);
         }
     }
 
-    protected abstract void EnemyAnimatorAttacking();
+    protected abstract  void EnemyAnimatorAttacking();
     protected abstract void EnemyAnimatorDying();
 
     protected void OnCollisionEnter2D(Collision2D other)
@@ -34,9 +35,11 @@ public abstract class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
+            
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamages(damageDeal);
-           
+            EnemyAnimatorAttacking();
+
         }
        
        
