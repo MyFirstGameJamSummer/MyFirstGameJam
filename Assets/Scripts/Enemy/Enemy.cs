@@ -9,7 +9,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] public int damageProjectile;
     [SerializeField] public int damageMelee;
     [SerializeField] protected Animator _animator;
-    protected int currentHealth;
+    public int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +26,10 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    protected abstract void EnemyAnimatorAttacking();
+    protected abstract void EnemyAnimatorDying();
 
-
-    private void OnCollisionEnter2D(Collision2D other)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
 
         if (other.gameObject.tag == "Player")
@@ -42,6 +43,9 @@ public abstract class Enemy : MonoBehaviour
     }
 
 
+
+   
+    
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

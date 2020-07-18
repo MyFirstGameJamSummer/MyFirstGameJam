@@ -42,8 +42,10 @@ public class Projectile : MonoBehaviour
         }
         else if (other.gameObject.tag == "Enemy")
         {
+            
             Enemy enemy = other.GetComponent<Enemy>();
             enemy.TakeDamage(enemy.damageProjectile);
+            Debug.Log(enemy.currentHealth);
             ProjectileDestroy();
         }
     }
@@ -53,6 +55,8 @@ public class Projectile : MonoBehaviour
     {
         anim.SetTrigger("Destroy");
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        Destroy(GetComponent<Collider2D>());
         Destroy(gameObject, 0.5f);
+      
     }
 }
