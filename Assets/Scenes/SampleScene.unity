@@ -299,7 +299,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 1
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -7405,20 +7405,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9007321581758896443}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &597734268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597734264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adfb9e7127421cc4fb731c829c006a31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aipath: {fileID: 861246149}
---- !u!61 &597734269
+--- !u!61 &597734265
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7444,6 +7431,62 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4903889, y: 1.4903879}
   m_EdgeRadius: 0
+--- !u!114 &597734268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597734264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfb9e7127421cc4fb731c829c006a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aipath: {fileID: 861246149}
+--- !u!61 &597734269
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597734264}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.019600868, y: 0.019600391}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4903889, y: 1.4903879}
+  m_EdgeRadius: 0
+--- !u!114 &597734270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597734264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fc7d6c266305f4d9497828b04a2de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damageDeal: 20
+  damageProjectile: 50
+  damageMelee: 100
+  _animator: {fileID: 0}
 --- !u!1 &861246146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9007321579844594092, guid: 21b7e7b2d418ca64884c5e29246777f1,
@@ -9679,6 +9722,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.96992004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799331755136542012, guid: 87147531382618f4fa83bef4e1aa7f52,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799331755136542012, guid: 87147531382618f4fa83bef4e1aa7f52,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8799331755136542013, guid: 87147531382618f4fa83bef4e1aa7f52,
         type: 3}
