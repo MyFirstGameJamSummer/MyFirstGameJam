@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Left,
         Right,
-        None
+        
     }
     
    
@@ -32,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
 
-        newDirection = Direction.None;
-        lastDirection = Direction.None;
+        newDirection = Direction.Right;
+        lastDirection = Direction.Right;
         rb2d = GetComponent<Rigidbody2D>();
         playerVelocity = Vector2.zero;
         animator.GetComponent<Animator>();
@@ -64,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
             playerVelocity.y = verticalInput * speed;
             isWalking = true;
         }
+
+        
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("iswalking", true);
@@ -101,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Flip(Direction _new, Direction _last)
     {
-        if ( _last != Direction.None && _new != _last )
+        if ( _new != _last )
         {
             flipScale = transform.localScale;
             flipScale.x *= -1;

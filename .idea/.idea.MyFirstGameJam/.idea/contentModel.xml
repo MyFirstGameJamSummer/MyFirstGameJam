@@ -216,7 +216,8 @@
         <e p="EnemyGFX.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemy" t="Include">
-            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyGreen.cs" t="Include" />
+            <e p="EnemyGreenPathFinder.cs" t="Include" />
           </e>
           <e p="HealthBar.cs" t="Include" />
           <e p="Player" t="Include">
