@@ -7,7 +7,8 @@ using Pathfinding;
 public class YellowProjectile : MonoBehaviour
 {
     public AIDestinationSetter AIDes;
-     GameObject hero;
+    GameObject hero;
+    [HideInInspector] public GameObject shootedByEnemy;
 
     private Vector3 initpos;
     [SerializeField] private float destroyDistance;
@@ -40,5 +41,22 @@ public class YellowProjectile : MonoBehaviour
     private void DestroyProjectile()
     {
         Destroy(gameObject,0.3f );
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.name.Equals("Outbound"))
+        {
+           DestroyProjectile();
+        }
+        else if (other.gameObject.tag == "Player")
+        {
+           
+            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamages(shootedByEnemy.GetComponent<EnemyYellow>().damageDeal);
+            gameObject.GetComponentInParent<AIPath>().canMove = false;
+            DestroyProjectile();
+        }
     }
 }

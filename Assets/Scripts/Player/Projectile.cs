@@ -57,6 +57,7 @@ public class Projectile : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Destroy(GetComponent<Collider2D>());
         Destroy(gameObject, 0.5f);
+        
       
     }
     public void DestroyProjectile()
