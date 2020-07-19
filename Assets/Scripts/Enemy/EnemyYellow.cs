@@ -27,9 +27,8 @@ public class EnemyYellow : Enemy
     {
         if (Time.time > NextFire)
         {
-            Instantiate(YellowProjectile, ShootingPoint.transform.position, Quaternion.identity);
-            YellowProjectile.SetActive(true);
-            NextFire = Time.time + FireRate;
+            _animator.SetBool("IsAttacking", true);
+            
         }
     }
 
@@ -39,7 +38,17 @@ public class EnemyYellow : Enemy
     }
     protected override void EnemyAnimatorDying()
     {
-
+        _animator.SetTrigger("Death");
+    }
+    void setAttackFalse()
+    {
+        _animator.SetBool("IsAttacking", false); 
+    }
+    void ShootProjectile()
+    {
+        Instantiate(YellowProjectile, ShootingPoint.transform.position, Quaternion.identity);
+        YellowProjectile.SetActive(true);
+        NextFire = Time.time + FireRate;
     }
     
 }
