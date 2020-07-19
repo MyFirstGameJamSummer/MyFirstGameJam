@@ -7984,6 +7984,22 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5629593402842672491}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &1450112845
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450112843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.12842703}
+  serializedVersion: 2
+  m_Radius: 0.621573
 --- !u!114 &1450112847
 MonoBehaviour:
   m_ObjectHideFlags: 0

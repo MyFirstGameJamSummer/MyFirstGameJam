@@ -38,6 +38,7 @@ public class EnemyYellow : Enemy
     }
     protected override void EnemyAnimatorDying()
     {
+        Debug.Log("Die!");
         _animator.SetTrigger("Death");
     }
     void setAttackFalse()
