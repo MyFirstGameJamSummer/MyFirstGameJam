@@ -23,7 +23,7 @@ public abstract class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             EnemyAnimatorDying();
-            Destroy(gameObject,1.55f);
+            
         }
     }
 
@@ -53,5 +53,9 @@ public abstract class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
         
+    }
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }
