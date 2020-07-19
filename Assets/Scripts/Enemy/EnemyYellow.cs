@@ -47,9 +47,11 @@ public class EnemyYellow : Enemy
     void ShootProjectile()
     {
         Instantiate(YellowProjectile, ShootingPoint.transform.position, Quaternion.identity);
-        YellowProjectile.SetActive(true);
         NextFire = Time.time + FireRate;
     }
+    
+    
+    
     
 }
 
