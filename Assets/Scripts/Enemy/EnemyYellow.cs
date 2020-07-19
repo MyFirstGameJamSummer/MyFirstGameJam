@@ -46,7 +46,8 @@ public class EnemyYellow : Enemy
     }
     void ShootProjectile()
     {
-        Instantiate(YellowProjectile, ShootingPoint.transform.position, Quaternion.identity);
+        GameObject go = Instantiate(YellowProjectile, ShootingPoint.transform.position, Quaternion.identity);
+        go.GetComponentInChildren<YellowProjectile>().shootedByEnemy = gameObject;
         NextFire = Time.time + FireRate;
     }
     
