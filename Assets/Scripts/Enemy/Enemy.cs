@@ -11,7 +11,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Animator _animator;
     public int currentHealth;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         currentHealth = maxHealth;
         _animator = GetComponent<Animator>();
@@ -23,6 +23,7 @@ public abstract class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             EnemyAnimatorDying();
+            Debug.Log("Die");
             
         }
     }

@@ -7473,7 +7473,7 @@ MonoBehaviour:
   damageProjectile: 50
   damageMelee: 100
   _animator: {fileID: 597734266}
-  currentHealth: 0
+  currentHealth: 200
   aipath: {fileID: 861246149}
 --- !u!61 &597734271
 BoxCollider2D:
@@ -8012,15 +8012,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fc82c752321ce47ad7d243b1a8666a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 250
   damageDeal: 20
   damageProjectile: 50
   damageMelee: 100
   _animator: {fileID: 1450112844}
   currentHealth: 0
+--- !u!114 &1450112849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450112843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105be1f331768be43be32ee368dfb04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   YellowProjectile: {fileID: 632488258309700198, guid: f1c1e1618d1d1b04197be43746b24bfb,
     type: 3}
   ShootingPoint: {fileID: 1723770038}
+  YellowAnim: {fileID: 1450112844}
 --- !u!1 &1550868042
 GameObject:
   m_ObjectHideFlags: 0
@@ -9642,12 +9655,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14f369a5dcd239409abb6b108be4b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 200
   damageDeal: 0
   damageProjectile: 0
   damageMelee: 0
-  _animator: {fileID: 0}
+  _animator: {fileID: 2095699528}
   currentHealth: 0
+--- !u!95 &2095699528 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1990183307931551388, guid: 1d7e380584de1014dba07ae44cf2e55d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1990183309648804797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2124323981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8885195258053637013, guid: 3c5bbe1e73602234c9cccc8390e13348,
@@ -9888,12 +9907,12 @@ PrefabInstance:
     - target: {fileID: 8799331755136542015, guid: 87147531382618f4fa83bef4e1aa7f52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.31
+      value: -5.49
       objectReference: {fileID: 0}
     - target: {fileID: 8799331755136542015, guid: 87147531382618f4fa83bef4e1aa7f52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.63
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: 8799331755136542015, guid: 87147531382618f4fa83bef4e1aa7f52,
         type: 3}
