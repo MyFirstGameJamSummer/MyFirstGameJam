@@ -11,6 +11,7 @@ public class EnemyRedLaserShooting : MonoBehaviour
 
    public void SetBigLaserActive()
     {
+        
         BigLaser.SetActive(true);
         SmallLaser.SetActive(false);
     }

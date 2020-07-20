@@ -46,9 +46,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected void Attack(GameObject hero)
     {
-        PlayerHealth playerHealth = hero.gameObject.GetComponent<PlayerHealth>();
-        playerHealth.TakeDamages(damageDeal);
-        EnemyAnimatorAttacking();
+       DealDamagePlayer(hero);
+       EnemyAnimatorAttacking();
     }
 
 
@@ -63,5 +62,12 @@ public abstract class Enemy : MonoBehaviour
     public void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+
+    protected void DealDamagePlayer(GameObject hero)
+    {
+        PlayerHealth playerHealth = hero.gameObject.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamages(damageDeal);
     }
 }

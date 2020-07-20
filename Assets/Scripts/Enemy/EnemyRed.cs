@@ -15,10 +15,9 @@ public class EnemyRed : Enemy
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(1,0), 10, LayerMask.GetMask("Characters"));
 
-        if (hit.collider != null && hit.collider.gameObject.tag == "Player") 
+        if (hit.collider != null && hit.collider.gameObject.tag == "Player" && _animator.GetBool("IsAttacking") == false) 
         {
-            Debug.Log("Raycast");
-          
+
             Attack(hit.collider.gameObject);
         }
     }
@@ -26,6 +25,7 @@ public class EnemyRed : Enemy
     protected override void EnemyAnimatorAttacking()
     {
         _animator.SetBool("IsAttacking", true);
+        _animator.SetBool("IsIdle", false);
     }
 
     protected override void EnemyAnimatorDying()
