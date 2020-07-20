@@ -67,7 +67,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected void DealDamagePlayer(GameObject hero)
     {
-        PlayerHealth playerHealth = hero.gameObject.GetComponent<PlayerHealth>();
+        Debug.Log(hero.name);
+        PlayerHealth playerHealth = hero.GetComponent<PlayerHealth>();
         playerHealth.TakeDamages(damageDeal);
     }
 }
