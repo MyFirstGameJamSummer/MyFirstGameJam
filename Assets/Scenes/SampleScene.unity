@@ -138,15 +138,35 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3581120537935047530, guid: 1ec08a7111479ef48978eb5f9a4526fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4140862212015737564, guid: 1ec08a7111479ef48978eb5f9a4526fb,
         type: 3}
       propertyPath: m_SortingLayerID
       value: 1178861151
       objectReference: {fileID: 0}
+    - target: {fileID: 4428406236561382348, guid: 1ec08a7111479ef48978eb5f9a4526fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5886251563667328462, guid: 1ec08a7111479ef48978eb5f9a4526fb,
         type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886251563667328462, guid: 1ec08a7111479ef48978eb5f9a4526fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958785886649675029, guid: 1ec08a7111479ef48978eb5f9a4526fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8770516640473730860, guid: 1ec08a7111479ef48978eb5f9a4526fb,
         type: 3}
@@ -4608,7 +4628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375207859}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RangeAttackpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7622,7 +7642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150385047}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MeleeAttackpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7743,6 +7763,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1163993089}
     m_Modifications:
+    - target: {fileID: 4122140506727219116, guid: a49d1ea43ba576248a0d94154be4a7db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4431674112175580581, guid: a49d1ea43ba576248a0d94154be4a7db,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7752,6 +7777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978672142273918084, guid: a49d1ea43ba576248a0d94154be4a7db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6214853014256218148, guid: a49d1ea43ba576248a0d94154be4a7db,
         type: 3}
@@ -7873,6 +7903,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManaBar
       objectReference: {fileID: 0}
+    - target: {fileID: 6241310145685905660, guid: a49d1ea43ba576248a0d94154be4a7db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372264864098259624, guid: a49d1ea43ba576248a0d94154be4a7db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49d1ea43ba576248a0d94154be4a7db, type: 3}
 --- !u!114 &1300730426 stripped
@@ -7969,6 +8009,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8885195258053637013, guid: 3c5bbe1e73602234c9cccc8390e13348,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3318066725517383503, guid: 3c5bbe1e73602234c9cccc8390e13348, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c5bbe1e73602234c9cccc8390e13348, type: 3}
@@ -8034,6 +8079,23 @@ MonoBehaviour:
     type: 3}
   ShootingPoint: {fileID: 1723770038}
   YellowAnim: {fileID: 1450112844}
+  Hero: {fileID: 1163993082}
+--- !u!58 &1450112850
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450112843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.12842703}
+  serializedVersion: 2
+  m_Radius: 0.621573
 --- !u!1 &1550868042
 GameObject:
   m_ObjectHideFlags: 0
@@ -9843,6 +9905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799331755136542009, guid: 87147531382618f4fa83bef4e1aa7f52,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8799331755136542012, guid: 87147531382618f4fa83bef4e1aa7f52,
         type: 3}

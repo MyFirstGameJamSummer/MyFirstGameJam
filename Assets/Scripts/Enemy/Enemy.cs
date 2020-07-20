@@ -37,13 +37,18 @@ public abstract class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             
-            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-            playerHealth.TakeDamages(damageDeal);
-            EnemyAnimatorAttacking();
+           Attack(other.gameObject);
 
         }
        
        
+    }
+
+    protected void Attack(GameObject hero)
+    {
+        PlayerHealth playerHealth = hero.gameObject.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamages(damageDeal);
+        EnemyAnimatorAttacking();
     }
 
 
