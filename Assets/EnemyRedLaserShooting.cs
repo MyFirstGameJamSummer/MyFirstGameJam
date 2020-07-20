@@ -31,5 +31,5 @@ public class EnemyRedLaserShooting : MonoBehaviour
         animRed.SetBool("IsIdle", true);
     }
     
-
+    
 }
