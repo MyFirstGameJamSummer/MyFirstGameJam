@@ -20,6 +20,7 @@ public class RedLaser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Hit");
         PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
         playerHealth.TakeDamages(30);
     }
