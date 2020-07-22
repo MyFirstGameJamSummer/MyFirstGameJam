@@ -29,7 +29,7 @@ AnimationClip:
       value: {fileID: 8478808911051815206, guid: 5e8230822b866d64d86fe5a8257059d4,
         type: 3}
     - time: 0.6
-      value: {fileID: 7178783236831669632, guid: 5e8230822b866d64d86fe5a8257059d4,
+      value: {fileID: 343318190430080282, guid: 5e8230822b866d64d86fe5a8257059d4,
         type: 3}
     - time: 0.81666666
       value: {fileID: 8497473687133540641, guid: 5e8230822b866d64d86fe5a8257059d4,
@@ -86,7 +86,7 @@ AnimationClip:
     - {fileID: 343318190430080282, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
     - {fileID: 4416715791008224876, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
     - {fileID: 8478808911051815206, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
-    - {fileID: 7178783236831669632, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
+    - {fileID: 343318190430080282, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
     - {fileID: 8497473687133540641, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
     - {fileID: 326597099220502751, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
     - {fileID: 7786698818574655449, guid: 5e8230822b866d64d86fe5a8257059d4, type: 3}
@@ -132,13 +132,6 @@ AnimationClip:
     messageOptions: 0
   - time: 0.6
     functionName: SetBigLaserActive
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6
-    functionName: DealDamagePlayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

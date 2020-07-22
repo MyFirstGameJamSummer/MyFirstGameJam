@@ -13,13 +13,16 @@ public class EnemyRed : Enemy
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(1,0), 10, LayerMask.GetMask("Characters"));
-
-        if (hit.collider != null && hit.collider.gameObject.tag == "Player" && _animator.GetBool("IsAttacking") == false) 
+        if (!_animator.GetBool("IsAttacking"))
         {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(1,0), 10, LayerMask.GetMask("Characters"));
 
-            Attack(hit.collider.gameObject);
+            if (hit.collider != null && hit.collider.gameObject.tag == "Player") 
+            {
+                EnemyAnimatorAttacking();
+            }
         }
+
     }
 
     protected override void EnemyAnimatorAttacking()

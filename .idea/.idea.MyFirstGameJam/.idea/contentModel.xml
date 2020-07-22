@@ -213,10 +213,8 @@
             <e p="UnityReferenceHelper.cs" t="Include" />
           </e>
         </e>
-        <e p="EnemyRedLaserShooting.cs" t="Include" />
-        <e p="enemyYellowShooting.cs" t="Include" />
-        <e p="RedLaser.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="CameraTransition.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyGFX.cs" t="Include" />
@@ -226,6 +224,9 @@
             <e p="EnemyYellow.cs" t="Include" />
             <e p="YellowProjectile.cs" t="Include" />
           </e>
+          <e p="EnemyRedLaserShooting.cs" t="Include" />
+          <e p="enemyYellowShooting.cs" t="Include" />
+          <e p="MeleeAttack.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="HealthBar.cs" t="Include" />
             <e p="Melee.cs" t="Include" />
@@ -234,9 +235,7 @@
             <e p="PlayerMovement.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
-        </e>
-        <e p="Tilemap" t="Include">
-          <e p="MeleeAttack.cs" t="Include" />
+          <e p="RedLaser.cs" t="Include" />
         </e>
       </e>
       <e p="AstarPathfindingProject.csproj" t="IncludeRecursive" />
