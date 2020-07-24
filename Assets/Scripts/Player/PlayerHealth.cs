@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamages(20);
         }
+        if (currentHealth <= 0)
+        {
+            Debug.Log("you died");
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        }
     }
 
     public void TakeDamages (int Damage)
@@ -29,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
         healthbar.SetHealth(currentHealth);
     }
+    
 
    
 }

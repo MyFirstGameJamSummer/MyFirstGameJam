@@ -30,6 +30,10 @@ public class EnemyRedLaserShooting : MonoBehaviour
         animRed.SetBool("IsAttacking", false);
         animRed.SetBool("IsIdle", true);
     }
+    public void CharDeath()
+    {
+        animRed.SetTrigger("Death");
+    }
     
     
 }
